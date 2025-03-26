@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Todo } from '../Models/todo';
-// @Injectable({
-//   providedIn: 'root'
-// })
+@Injectable({
+  providedIn: 'root'
+})
 export class TodoService {
   private todos: Todo[] = [];  
   constructor() { 
