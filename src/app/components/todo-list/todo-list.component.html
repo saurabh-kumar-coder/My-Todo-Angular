@@ -1,0 +1,20 @@
+<p>todo-list works!</p>
+<div class="todo-container">
+    <h2>Todo List</h2>
+  
+    <!-- Input for adding a new todo -->
+    <div class="input-group">
+      <input type="text" [(ngModel)]="newTodoTitle" placeholder="Enter a task">
+      <button (click)="addTodo()">Add</button>
+    </div>
+  
+    <!-- Display the todo list -->
+    <ul>
+      <li *ngFor="let todo of todos">
+        <input type="checkbox" [checked]="todo.status" (change)="updateTodo(todo.id)">
+        <span [class.completed]="todo.status">{{ todo.title }}</span>
+        <button (click)="deleteTodo(todo.id)">❌</button>
+      </li>
+    </ul>
+  </div>
+  
